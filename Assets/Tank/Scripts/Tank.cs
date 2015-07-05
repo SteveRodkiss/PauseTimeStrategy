@@ -1,15 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Tank : MonoBehaviour {
+[RequireComponent(typeof(NavMeshAgent))]
+public class Tank : MonoBehaviour
+{
+	NavMeshAgent nav;
+	Vector3 Destination = Vector3.zero;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+	{
+		nav = GetComponent<NavMeshAgent>();
+		nav.destination = Destination;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update ()
+	{
+		
 	}
+
+	public void SetDestination(Vector3 d)
+	{
+		//set the destination for this tank
+		nav.SetDestination(d);
+	}
+
 }
