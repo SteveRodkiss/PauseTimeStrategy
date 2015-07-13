@@ -13,12 +13,7 @@ public class Tank : MonoBehaviour
 		nav = GetComponent<NavMeshAgent>();
 		nav.destination = Destination;
 	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		
-	}
+
 
 	public void SetDestination(Vector3 d)
 	{

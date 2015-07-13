@@ -4,14 +4,14 @@ using System.Collections;
 public class RTSCameraScript : MonoBehaviour
 {
 	//the player's tank sript so we can set destination
-	Tank player;
+	GameObject player;
 
 	public float MoveSpeed = 10f;
 
 	// Use this for initialization
 	void Start ()
 	{
-		player = GameObject.FindGameObjectWithTag("Tank").GetComponent<Tank>();
+		player = GameObject.FindGameObjectWithTag("Tank");
 		if(player == null)
 		{
 			Debug.Log("Can't find player");
@@ -25,7 +25,7 @@ public class RTSCameraScript : MonoBehaviour
 		Vector3 clickpos;
 		if(GetClick(out clickpos))
 		{
-			player.SetDestination(clickpos);
+			player.SendMessage("SetDestination",clickpos,SendMessageOptions.DontRequireReceiver);
 		}
 	}
 
@@ -48,7 +48,7 @@ public class RTSCameraScript : MonoBehaviour
 			//cast a ray and set clickpos to hitpoint
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
-			if(Physics.Raycast(ray,out hit,100f))
+			if(Physics.Raycast(ray,out hit,5000f))
 			{
 				clickpos = hit.point;
 				return true;
