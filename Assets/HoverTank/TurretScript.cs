@@ -21,9 +21,16 @@ public class TurretScript : MonoBehaviour
 		if (GetTarget (out Target)) 
 		{
 			//turn to face enemy
-			Vector3 dir = (Target.transform.position - transform.position).normalized;
-			Vector3 newdir = Vector3.RotateTowards (transform.forward, dir, TurnSpeed * Time.deltaTime, 0f);
-			transform.rotation = Quaternion.LookRotation (newdir, transform.up);
+			Vector3 relativedirection = transform.InverseTransformPoint(Target.transform.position);
+			if(relativedirection.x > 0.01f)
+			{
+				transform.Rotate(0,50f*Time.deltaTime,0,Space.Self);
+			}
+			if(relativedirection.x < -0.01f)
+			{
+				transform.Rotate(0,-50f*Time.deltaTime,0,Space.Self);
+			}
+
 			
 			//check it is facing and within range
 			Ray ray = new Ray (transform.position, transform.forward);

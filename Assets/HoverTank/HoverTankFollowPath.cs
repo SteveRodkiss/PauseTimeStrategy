@@ -14,6 +14,7 @@ public class HoverTankFollowPath : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		destination = transform.position;
 		path = new NavMeshPath();
 		CalcPath();
 		rigidBody = GetComponent<Rigidbody>();
