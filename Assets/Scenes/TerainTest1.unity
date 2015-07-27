@@ -184,6 +184,7 @@ GameObject:
   - 33: {fileID: 529367348}
   - 65: {fileID: 529367347}
   - 23: {fileID: 529367346}
+  - 114: {fileID: 529367350}
   m_Layer: 0
   m_Name: EnemyCube (3)
   m_TagString: Enemy
@@ -245,7 +246,19 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
+--- !u!114 &529367350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 529367345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d35b93554c0a734aaa5f19d777e4230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1001 &971610205
 Prefab:
   m_ObjectHideFlags: 0
@@ -511,6 +524,7 @@ GameObject:
   - 33: {fileID: 1294978543}
   - 65: {fileID: 1294978542}
   - 23: {fileID: 1294978541}
+  - 114: {fileID: 1294978545}
   m_Layer: 0
   m_Name: EnemyCube (2)
   m_TagString: Enemy
@@ -572,7 +586,19 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
+--- !u!114 &1294978545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1294978540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d35b93554c0a734aaa5f19d777e4230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &1345659690
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +792,7 @@ GameObject:
   - 33: {fileID: 1995076100}
   - 65: {fileID: 1995076099}
   - 23: {fileID: 1995076098}
+  - 114: {fileID: 1995076102}
   m_Layer: 0
   m_Name: EnemyCube (1)
   m_TagString: Enemy
@@ -827,7 +854,19 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
+--- !u!114 &1995076102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1995076097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d35b93554c0a734aaa5f19d777e4230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
 --- !u!1 &2041371638 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 108772, guid: c655de95eadcfc14f90abafc4798c7bf, type: 2}
@@ -869,6 +908,7 @@ GameObject:
   - 33: {fileID: 2087785027}
   - 65: {fileID: 2087785026}
   - 23: {fileID: 2087785025}
+  - 114: {fileID: 2087785029}
   m_Layer: 0
   m_Name: EnemyCube
   m_TagString: Enemy
@@ -931,3 +971,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!114 &2087785029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2087785024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d35b93554c0a734aaa5f19d777e4230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 50
